@@ -12,7 +12,7 @@ $(function () {
 
 
 
-var a = "helloWorld";
+
 
 
 
@@ -52,6 +52,20 @@ $("#previous_module").click(function () {
 });
 
 
+
+$('form > input').change(function() {
+        consol.log("wtf");
+        var empty = true;
+        $('form > input').each(function() {
+            if ($(this).val() != '') {
+                empty = false;
+            }
+        });
+        if (!empty) {
+            $('#next_module').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+        }
+});
+
 //Checks to see if at beginning or end of modules, if so, hides the appropriate buttons.
 function  remove_or_show_nav_buttons() {
 
@@ -68,6 +82,9 @@ function  remove_or_show_nav_buttons() {
     else{
         $("#next_module").show();
     }
-
-
+    $('#next_module').attr('disabled', 'disabled');
+    if($("li.active").attr('id') != "analysis_page") {
+        $('#next_module').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
+    }
 }
+
