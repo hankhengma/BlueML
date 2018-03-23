@@ -1,17 +1,16 @@
-#next_module{
-    position:absolute;
-    bottom:3.75rem;
-    right:0rem;
 
+#next_module{
+    position:fixed;
+    bottom:0;
+    right:0;
 }
 
 
 #previous_module{
-    position:absolute;
-    bottom:3.75rem;
-    left:0rem;
+    position:fixed;
+    bottom:0;
+    left:0;
 }
-
 .app-nav a{
     background-color: #00274c;
     color: #ffcb05
