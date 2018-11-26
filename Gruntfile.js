@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                 globals: ['expect'],
                 reporter: 'spec',
             },
-            all: ['test/test_mocha.js']
+            all: ['test/test_mocha.js', 'test/datalist.specs.js']
         },
         karma: {
             // Karma is a JavaScript test runner
